@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>수학 함수 동적 모핑 캔버스 | 이차·삼각함수 & 미분 접선 실험실</title>
+  <meta name="description" content="슬라이더로 계수를 조절하며 이차·삼차·삼각함수의 그래프 변환과 미분 접선의 기울기를 실시간 60fps로 관찰하는 수학 실험실입니다.">
+  <link rel="canonical" href="https://function-morph-lab.enjoy-onepage.com/">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1204958742918459" crossorigin="anonymous"></script>
+</head>
+<body>
+  <aside class="ad-top-wrapper" aria-label="스폰서 링크">
+    <div class="ad-top-box">
+      <ins class="adsbygoogle"
+           style="display:block; max-height:90px;"
+           data-ad-client="ca-pub-1204958742918459"
+           data-ad-slot="3824727725"
+           data-ad-format="horizontal"
+           data-full-width-responsive="false"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </aside>
+
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <span class="brand-badge">중고등 수학 인터랙티브 3.1</span>
+        <h1 class="app-title">수학 함수 동적 모핑 캔버스</h1>
+      </div>
+      <p class="app-subtitle">계수 슬라이더 조작 실시간 그래프 모핑 & 미분 접선 기울기 추적</p>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <nav class="mode-tabs">
+      <button class="tab-btn active" data-type="quad">이차함수</button>
+      <button class="tab-btn" data-type="sin">삼각함수</button>
+      <button class="tab-btn" data-type="cubic">삼차함수</button>
+    </nav>
+
+    <!-- Function Formula Banner -->
+    <div class="formula-banner">
+      <div class="formula-latex" id="formulaText">y = 1.0x² + 0.0x + 0.0</div>
+      <div class="tangent-info" id="tangentText">마우스를 그래프 위에 올리면 점에서의 미분 접선 f'(x)가 표시됩니다.</div>
+    </div>
+
+    <!-- Canvas Viewport -->
+    <div class="graph-viewport-box">
+      <canvas id="graphCanvas" width="600" height="340"></canvas>
+    </div>
+
+    <!-- Sliders Controls -->
+    <section class="sliders-card">
+      <div class="slider-row">
+        <label>계수 a (진폭 / 폭): <span id="valA">1.0</span></label>
+        <input type="range" id="paramA" min="-3" max="3" step="0.1" value="1" />
+      </div>
+      <div class="slider-row">
+        <label>계수 b (주기 / 일차항): <span id="valB">0.0</span></label>
+        <input type="range" id="paramB" min="-3" max="3" step="0.1" value="0" />
+      </div>
+      <div class="slider-row">
+        <label>계수 c (평행이동 / 상수항): <span id="valC">0.0</span></label>
+        <input type="range" id="paramC" min="-5" max="5" step="0.2" value="0" />
+      </div>
+      <button class="action-btn secondary full" id="btnResetParams">계수 초기화</button>
+    </section>
+
+    <aside class="ad-mid-wrapper" aria-label="스폰서 링크">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1204958742918459"
+           data-ad-slot="1186914926"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </aside>
+
+    <section class="edu-card">
+      <h2>함수 계수와 그래프의 기하학적 관계</h2>
+      <p>계수 $a$가 양수에서 음수로 바뀔 때 포물선의 볼록 방향이 위아래로 대칭 이동하며, 삼각함수에서 $b$의 절댓값이 커질수록 주기는 $rac{2\pi}{|b|}$로 압축됩니다. 곡선 위의 한 점에서 접선의 기울기 $f'(x)$는 그 순간의 변화율(미분계수)을 나타냅니다.</p>
+    </section>
+  </main>
+
+  <aside class="ad-bot-wrapper" aria-label="스폰서 추천">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1204958742918459"
+         data-ad-slot="3416334507"
+         data-ad-format="autorelaxed"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </aside>
+
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <p class="copyright">© 2026 수학 함수 동적 모핑 캔버스. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="about.html">도구 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+:root {
+  --bg-color: #09090b;
+  --surface: #18181b;
+  --surface-border: #27272a;
+  --primary: #a855f7;
+  --text-main: #fafafa;
+  --text-muted: #a1a1aa;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-color); color: var(--text-main); font-family: var(--font-family);
+  overflow-x: hidden; width: 100%;
+}
+.ad-top-wrapper {
+  width: 100%; max-height: 90px; overflow: hidden; background: var(--surface);
+  border-bottom: 1px solid var(--surface-border); display: flex; justify-content: center;
+}
+.ad-top-box { width: 100%; max-width: 1200px; max-height: 90px; overflow: hidden; }
+.app-header {
+  padding: 1rem; text-align: center;
+  background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+  border-bottom: 1px solid var(--surface-border);
+}
+.header-inner { max-width: 800px; margin: 0 auto; }
+.brand-badge {
+  display: inline-block; font-size: 0.75rem; background: rgba(168, 85, 247, 0.2);
+  color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 999px;
+  margin-bottom: 0.4rem; font-weight: 700; border: 1px solid var(--primary);
+}
+.app-title { font-size: clamp(1.1rem, 4vw, 1.6rem); font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-subtitle { font-size: clamp(0.75rem, 2.5vw, 0.85rem); color: var(--text-muted); margin-top: 0.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.main-container { max-width: 800px; margin: 0 auto; padding: 1rem; width: 100%; }
+.mode-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.tab-btn {
+  flex: 1; padding: 0.6rem 0.2rem; background: var(--surface);
+  border: 1px solid var(--surface-border); color: var(--text-muted);
+  border-radius: 8px; font-weight: 700; cursor: pointer;
+  font-size: clamp(0.7rem, 2.5vw, 0.85rem); white-space: nowrap;
+}
+.tab-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.formula-banner {
+  background: var(--surface); border: 1px solid var(--surface-border);
+  border-radius: 12px; padding: 1rem; text-align: center; margin-bottom: 1rem;
+}
+.formula-latex { font-size: clamp(1.3rem, 5vw, 1.8rem); font-weight: 900; color: var(--primary); }
+.tangent-info { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem; }
+.graph-viewport-box {
+  background: #000; border: 1px solid var(--surface-border);
+  border-radius: 12px; overflow: hidden; margin-bottom: 1rem;
+  display: flex; justify-content: center;
+}
+#graphCanvas { max-width: 100%; height: auto; display: block; touch-action: none; }
+.sliders-card {
+  background: var(--surface); border: 1px solid var(--surface-border);
+  border-radius: 12px; padding: 1rem; margin-bottom: 1rem;
+}
+.slider-row { margin-bottom: 0.8rem; }
+.slider-row label { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.2rem; }
+.slider-row input { width: 100%; accent-color: var(--primary); }
+.action-btn { padding: 0.6rem 1rem; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; font-size: 0.85rem; }
+.action-btn.secondary { background: #27272a; color: #fff; border: 1px solid var(--surface-border); }
+.action-btn.full { width: 100%; margin-top: 0.5rem; }
+.ad-mid-wrapper, .ad-bot-wrapper { margin: 1.5rem 0; text-align: center; }
+.edu-card { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 12px; padding: 1.2rem; margin: 1.5rem 0; }
+.edu-card h2 { font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem; }
+.edu-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+.app-footer { background: #000; border-top: 1px solid var(--surface-border); padding: 1.5rem 1rem; text-align: center; }
+.copyright { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+.footer-nav a { font-size: 0.75rem; color: var(--text-muted); text-decoration: none; margin: 0 0.5rem; }
